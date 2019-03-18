@@ -26,7 +26,7 @@ describe('interactive_message_callback', function () {
 		beforeEach(function () {
 			// add action
 			this.controller.on('test', function (bot, message) {
-				bot.reply(message, 'hello');
+				bot.reply(message, 'Hello human! I am brand new Botkit bot, ready to be customized to your needs!');
 			});
 			
 			//this.sequence = [
