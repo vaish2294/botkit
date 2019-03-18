@@ -8,11 +8,7 @@ describe('interactive_message_callback', function () {
 		this.controller.shutdown();
 	});
 	
-	//beforeEach(function () {
-		//this.userInfo = {
-			//slackId: 'user123',
-			//channel: 'channel123',
-		//};
+
 		
 		this.controller = Botmock({
 			stats_optout: true,
@@ -36,7 +32,7 @@ describe('interactive_message_callback', function () {
 			//this.sequence = [
 //{
 					//type: 'interactive_message_callback', //if type null, default to direct_message
-					//user: this.userInfo.slackId, //user required for each direct message
+					
 					//channel: this.userInfo.channel_join, // user channel required for direct message
 					//messages: [
 						//{
@@ -62,7 +58,7 @@ describe('interactive_message_callback', function () {
 			this.sequence = [
 				{
 					type: 'interactive_message_callback', //if type null, default to direct_message
-					user: this.userInfo.slackId, //user required for each direct message
+					
 					channel: this.userInfo.channel, // user channel required for direct message
 					messages: [
 						{
@@ -92,31 +88,7 @@ describe('interactive_message_callback', function () {
 				bot.reply(message, 'hello');
 			});
 			
-			this.sequence = [
-				{
-					type: 'interactive_message_callback', //if type null, default to direct_message
-					user: this.userInfo.slackId, //user required for each direct message
-					channel: this.userInfo.channel, // user channel required for direct message
-					messages: [
-						//describe incoming attachments params
-						{
-							actions: [{
-								name: 'say',
-								value: 'say'
-							}],
-							user: {
-								id: 'some user id',
-							},
-							attachments: [],
-							original_message: {
-								attachments: [],
-							},
-							isAssertion: true,
-						}
-					]
-				}
-			];
-		});
+		
 		
 		it('should visit tests event and bot reply hello', function () {
 			return this.bot.usersInput(this.sequence).then((message) => {
