@@ -154,94 +154,9 @@ describe("controller tests", ()=>{
 });  
 
 
-// describe("controller tests", ()=>{
-//   afterEach(() => {
-//       //clean up botkit tick interval
-//       this.controller.shutdown();
-//   });
 
-//   beforeEach((done) => {
-//       this.userInfo = {
-//           slackId: 'user123',
-//           channel: 'channel123'
-//       };
 
-//       this.controller = Botmock({
-//           debug: false,
-//       });
-
-//       this.bot = this.controller.spawn();
-
-//       yourController(this.controller);
-//       done();
-//   });
-//   it('should return', () => {
-//       return this.bot.usersInput(
-//           [
-//               {
-//                   type: 'message_received', //if type null, default to direct_message 
-//                   payload: documentation,
-//                   user: this.userInfo.slackId, //user required for each direct message
-//                   channel: this.userInfo.channel, // user channel required for direct message
-//                   messages: [
-//                       {
-//                           text: 'Read the Docs',
-//                           isAssertion: false
-//                       }
-//                   ]
-//               }
-//           ]
-//       ).then((message) => {
-//           console.log(message);
-//           console.log('pranitaaaaaaa');
-//           console.log(message.payload);
-//           return assert.equal(message.text, 'Botkit is extensively documented! Here are some useful links');
-//       })
-//   }).timeout(10000);;  
-// });   
-
-// describe("controller tests", ()=>{
-//   afterEach(() => {
-      //clean up botkit tick interval
-//       this.controller.shutdown();
-//   });
-
-//   beforeEach((done) => {
-//       this.userInfo = {
-//           slackId: 'user123',
-//           channel: 'channel123'
-//       };
-
-//       this.controller = Botmock({
-//           debug: false,
-//       });
-
-//       this.bot = this.controller.spawn();
-
-//       yourController(this.controller);
-//       done();
-//   });
-//   it('should return', () => {
-//       return this.bot.usersInput(
-//           [
-//               {
-//                   type: 'message_received', //if type null, default to direct_message
-//                   user: this.userInfo.slackId, //user required for each direct message
-//                   channel: this.userInfo.channel, // user channel required for direct message
-//                   messages: [
-//                       {
-//                           text: 'Join the Community',
-//                           isAssertion: true
-//                       }
-//                   ]
-//               }
-//           ]
-//       ).then((message) => {
-//           console.log(message);
-//           return assert.equal(message.text, 'Our developer community has thousands of members, and there are always friendly people available to answer questions about building bots!');
-//       })
-//   }).timeout(10000);;  
-// });   
+ 
 
 
 
